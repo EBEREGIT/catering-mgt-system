@@ -1,5 +1,4 @@
 
-<main class="container">
     <div class="row">
       <div class="col-md-6 offset-md-6 sign-form">
         <form class='sign-up'>
@@ -102,4 +101,3 @@
         
 
     </div>
-  </main>

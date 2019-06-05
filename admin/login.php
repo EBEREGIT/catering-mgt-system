@@ -1,6 +1,6 @@
 <?php 
 	// require_once $_SERVER['DOCUMENT_ROOT'].'/ecommerce_oop/core/init.php';
-	include_once '../head.php';
+	include_once 'admin-head.php';
 
 	// $email = ((isset($_POST['email']))?sanitize($_POST['email']):'');
 	// $email = trim($email);
@@ -9,8 +9,6 @@
 	// //$hashed = password_hash($password, PASSWORD_DEFAULT);
 	// $errors = array();
 ?>
-
-<link rel="stylesheet" href="../css/bootstrap.min.css">
 <style type="text/css">
 	body{
 		background-image: url('../img/jay-wennington-2065-unsplash.jpg');
@@ -92,4 +90,4 @@
 	</form>
 	<p class="text-right"><a href="../index.php" alt="home">Visit Site</a></p>
 </div>	
-<!-- <?php include_once 'includes/footer.php'; ?> -->
+<?php include_once 'admin-foot.php'; ?>
