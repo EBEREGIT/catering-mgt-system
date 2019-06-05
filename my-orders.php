@@ -3,6 +3,7 @@
 <?php include_once('nav.php'); ?>
 
 	<div class="accordion" id="accordionExample">
+	<h3 class="bg-light order-title">ALL ORDERS FOR OLELEWE R. U.</h3>
 	<!-- card 1 -->
 	<div class="card">
 		<div class="card-header" id="headingOne">

@@ -21,6 +21,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="lagrange.php">Get Prediction</a>
               </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  My Orders
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="index.php">Place Order</a>
+                  <a class="dropdown-item" href="my-orders.php">View Orders</a>
+                </div>
+              </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="search menu" aria-label="search">

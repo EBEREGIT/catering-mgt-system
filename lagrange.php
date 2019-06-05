@@ -121,6 +121,7 @@
 <script src="lagrange/dist/js/Chart.min.js"></script>
 <script src="lagrange/lagrange.js"></script>
 <script src="lagrange/dist/js/index.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 
 <script>

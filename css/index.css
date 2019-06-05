@@ -45,6 +45,10 @@ form .form-control {
   border: 2px solid rgb(40, 167, 69);
 }
 
-.main {
-  background-color: red;
+.order-title {
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 2%;
 }
+
