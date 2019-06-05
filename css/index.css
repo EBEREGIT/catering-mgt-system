@@ -1,0 +1,50 @@
+body {
+  background-image: url('../img/jay-wennington-2065-unsplash.jpg');
+  background-size: 100vw 100vh;
+  height: auto;
+  background-repeat: no-repeat;
+  background-color: rgb(40, 167, 69);
+  background-blend-mode: luminosity;
+  background-attachment: fixed;
+}
+
+.navbar{
+  background: #fff !important;
+}
+
+.navbar .navbar-brand{
+  color: rgb(40, 167, 69);
+  font-weight: bolder;
+  background: #fff !important;
+}
+
+footer {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.sign-up {
+  background-color: #fff !important;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 2%;
+  border: 2px solid rgb(40, 167, 69);
+  border-radius: 1.5%;
+}
+
+.btn-sign{
+  background-color: #fff;
+  border: 2px solid rgb(40, 167, 69);
+  color: rgb(40, 167, 69);
+  /* font-weight: bold; */
+  margin-top: 20px;
+}
+
+form .form-control {
+  border: 2px solid rgb(40, 167, 69);
+}
+
+.main {
+  background-color: red;
+}
