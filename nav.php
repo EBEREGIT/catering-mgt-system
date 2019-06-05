@@ -34,7 +34,7 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="search menu" aria-label="search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Menu</button>
+              <button class="btn btn-outline-success my-2 my-sm-0 btn-sign" type="submit">Search Menu</button>
             </form>
           </div>
       </div>

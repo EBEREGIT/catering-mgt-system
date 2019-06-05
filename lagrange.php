@@ -11,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="lagrange/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
     <link href="lagrange/dist/css/index.css" rel="stylesheet">
     <link href="lagrange/dist/css/style.css" rel="stylesheet">
     <link href="lagrange/dist/css/katex.min.css" rel="stylesheet">
@@ -19,7 +20,7 @@
 
   <body>
   <?php include_once('nav.php'); ?>
-<div class="container">
+<div class="container lagrange">
 <h1>Lagrange</h1>
 <h4>The following equations define Lagrange polinomial interpolation</h4>
 <div id="LagrangeEquation" class="row">
@@ -121,8 +122,6 @@
 <script src="lagrange/dist/js/Chart.min.js"></script>
 <script src="lagrange/lagrange.js"></script>
 <script src="lagrange/dist/js/index.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
 
 <script>
 katex.render("L_i = \\frac{\\displaystyle \\prod_{{j=0 , j\\neq1}}^{n} (x - x_j)}{\\displaystyle \\prod_{j=0 , j\\neq1}^{n} (x_i - x_j)}" , equation, {
@@ -134,7 +133,4 @@ katex.render("P_n(x) = \\displaystyle \\sum_{i = 0}^{n} L_i \\cdot f(x_i)" , equ
 
 
 </script>
-  </body>
-
-
-</html>
+<?php include_once('foot.php'); ?>
