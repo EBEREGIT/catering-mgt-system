@@ -20,7 +20,7 @@
 
   <body>
   <?php include_once('nav.php'); ?>
-<div class="container lagrange">
+<div class="container sign-up">
 <h1>Lagrange</h1>
 <h4>The following equations define Lagrange polinomial interpolation</h4>
 <div id="LagrangeEquation" class="row">
