@@ -1,3 +1,8 @@
+<?php  
+	include_once '../core/init.php';
+	include_once '../core/functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

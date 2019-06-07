@@ -2,7 +2,7 @@
 <footer>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <h6> &copy Olelewe Reuben Uzoma | 2012/184899 | B.Sc Project</h6>
+        <h6 class="text-center"> &copy Olelewe Reuben Uzoma | 2012/184899 | B.Sc Project</h6>
       </div>
     </nav>
   </footer>

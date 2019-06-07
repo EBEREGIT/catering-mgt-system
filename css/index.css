@@ -26,8 +26,8 @@ footer {
 
 .sign-up {
   background-color: #fff !important;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin-top: 1.8%;
+  margin-bottom: 1.8%;
   padding: 2%;
   border: 2px solid rgb(40, 167, 69);
   border-radius: 1.5%;
@@ -52,12 +52,6 @@ form .form-control {
   padding: 2%;
 }
 
-/* .lagrange {
-  background-color: #fff !important;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  padding: 2%;
-  border: 2px solid rgb(40, 167, 69);
-  border-radius: 1.5%;
-} */
-
+.error {
+  color: #fff !important;
+}
