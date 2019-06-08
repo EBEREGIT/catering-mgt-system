@@ -2,8 +2,8 @@
 	include_once 'helpers.php';
 	include_once 'validate.php';
 
-		$name = ((isset($_POST['name']))?sanitize($_POST['name']):'');
-		$name = trim($name);
+		$full_name = ((isset($_POST['full_name']))?sanitize($_POST['full_name']):'');
+		$full_name = trim($full_name);
 		$email = ((isset($_POST['email']))?sanitize($_POST['email']):'');
 		$email = trim($email);
 		$phone_number = ((isset($_POST['phone_number']))?sanitize($_POST['phone_number']):'');
@@ -12,7 +12,11 @@
 		$date_of_event = trim($date_of_event);
 		$size = ((isset($_POST['size']))?sanitize($_POST['size']):'');
 		$size = trim($size);
-		
+		$type_of_event = ((isset($_POST['type_of_event']))?sanitize($_POST['type_of_event']):'');
+		$type_of_event = trim($type_of_event);
+		$color = ((isset($_POST['color']))?sanitize($_POST['color']):'');
+		$color = trim($color);
+
 		$password = ((isset($_POST['password']))?sanitize($_POST['password']):'');
 		$password = trim($password);
 		$hashed_password = ((isset($_POST['password']))?sanitize($_POST['password']):'');

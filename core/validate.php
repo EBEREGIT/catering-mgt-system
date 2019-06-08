@@ -43,7 +43,7 @@
 	{
 		//check if any field is empty
 		global $errors;
-		$required = array('name','account_number', 'account_name', 'email', 'phone_number');
+		$required = array('full_name','account_number', 'account_name', 'email', 'phone_number');
 		foreach ($required as $field) {
 			if (empty($_POST[$field])) {
 				$errors[] = "You must fill out all fields!";
@@ -122,7 +122,7 @@
 	{
 		//check if all fields are filled out
 		global $errors;
-		$required = array('name', 'size', 'email', 'phone_number', 'date_of_event');
+		$required = array('full_name', 'size', 'email', 'phone_number', 'date_of_event', 'type_of_event', 'color');
 		foreach ($required as $field) {
 			if (empty($_POST[$field])) {
 				$errors[] = "You must fill out all fields!";
