@@ -1,6 +1,9 @@
-<?php include_once('head.php'); ?>
+<?php 
+	include_once('head.php'); 
+	include_once('nav.php');
 
-<?php include_once('nav.php'); ?>
+	$order_query = $db->query("SELECT * FROM placed_orders");
+?>
 
 	<div class="accordion" id="accordionExample">
 	<h3 class="bg-light order-title">ALL ORDERS FOR OLELEWE R. U.</h3>
