@@ -1,133 +1,46 @@
 <?php 
+// include header files here
 	include_once('head.php'); 
 	include_once('nav.php');
-
-	$order_query = $db->query("SELECT * FROM placed_orders");
 ?>
 
 	<div class="accordion" id="accordionExample">
 	<h3 class="bg-light order-title">ALL ORDERS FOR OLELEWE R. U.</h3>
+
+<?php 
+	$i = 0;
+	$order_query = $db->query("SELECT * FROM placed_orders");
+	while ($orders = mysqli_fetch_assoc($order_query)) {
+		$i++;
+?>
 	<!-- card 1 -->
 	<div class="card">
-		<div class="card-header" id="headingOne">
+		<div class="card-header" id="heading<?php echo $i; ?>">
+
+		<!-- header to toggle the card -->
 		<h2 class="mb-0">
-			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-			2nd June, 2019
+			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="true" aria-controls="collapse<?php echo $i; ?>">
+			<?php echo $orders['date_added']; ?>
 			</button>
 		</h2>
 		</div>
 
-		<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+		<!-- body of the card -->
+		<div id="collapse<?php echo $i; ?>" class="collapse show" aria-labelledby="heading<?php echo $i; ?>" data-parent="#accordionExample">
 		<div class="card-body">
 			<ul>
-				<li>Name:</li>
-				<li>Email Address:</li>
-				<li>Phone No:</li>
-				<li>Date of Event:</li>
-				<li>Type of Event:</li>
-				<li>Size:</li>
-				<li>Colour Theme:</li>
+				<li><b>Name:</b> <?php echo $orders['full_name']; ?></li>
+				<li><b>Email Address:</b> <?php echo $orders['email']; ?></li>
+				<li><b>Phone No:</b> <?php echo $orders['phone_number']; ?></li>
+				<li><b>Date of Event:</b> <?php echo $orders['date_of_event']; ?></li>
+				<li><b>Type of Event:</b> <?php echo $orders['type_of_event']; ?></li>
+				<li><b>Size:</b> <?php echo $orders['size']; ?></li>
+				<li><b>Colour Theme:</b> <?php echo $orders['color']; ?></li>
 			</ul>
 			
 		</div>
 		</div>
 	</div>
+</div>
 
-	<!-- card 2 -->
-	<div class="card">
-		<div class="card-header" id="headingTwo">
-		<h2 class="mb-0">
-			<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-			2nd June, 2019
-			</button>
-		</h2>
-		</div>
-		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-		<div class="card-body">
-			<ul>
-				<li>Name:</li>
-				<li>Email Address:</li>
-				<li>Phone No:</li>
-				<li>Date of Event:</li>
-				<li>Type of Event:</li>
-				<li>Size:</li>
-				<li>Colour Theme:</li>
-			</ul>
-		</div>
-		</div>
-	</div>
-
-	<!-- card 3 -->
-	<div class="card">
-		<div class="card-header" id="headingFive">
-		<h2 class="mb-0">
-			<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-			2nd June, 2019
-			</button>
-		</h2>
-		</div>
-		<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-		<div class="card-body">
-		<ul>
-				<li>Name:</li>
-				<li>Email Address:</li>
-				<li>Phone No:</li>
-				<li>Date of Event:</li>
-				<li>Type of Event:</li>
-				<li>Size:</li>
-				<li>Colour Theme:</li>
-			</ul>
-		</div>
-		</div>
-	</div>
-
-	<!-- card 4 -->
-	<div class="card">
-		<div class="card-header" id="headingFour">
-		<h2 class="mb-0">
-			<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-			2nd June, 2019
-			</button>
-		</h2>
-		</div>
-		<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-		<div class="card-body">
-		<ul>
-				<li>Name:</li>
-				<li>Email Address:</li>
-				<li>Phone No:</li>
-				<li>Date of Event:</li>
-				<li>Type of Event:</li>
-				<li>Size:</li>
-				<li>Colour Theme:</li>
-			</ul>
-		</div>
-		</div>
-	</div>
-
-	<!-- card 5 -->
-	<div class="card">
-		<div class="card-header" id="headingThree">
-		<h2 class="mb-0">
-			<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-			2nd June, 2019
-			</button>
-		</h2>
-		</div>
-		<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-		<div class="card-body">
-		<ul>
-				<li>Name:</li>
-				<li>Email Address:</li>
-				<li>Phone No:</li>
-				<li>Date of Event:</li>
-				<li>Type of Event:</li>
-				<li>Size:</li>
-				<li>Colour Theme:</li>
-			</ul>
-		</div>
-		</div>
-	</div>
-	</div>
-
-<?php include_once('foot.php'); ?>
+<?php } include_once('foot.php'); ?>
