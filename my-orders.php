@@ -20,7 +20,9 @@
 		<!-- header to toggle the card -->
 		<h2 class="mb-0">
 			<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="true" aria-controls="collapse<?php echo $i; ?>">
-			<?php echo $orders['date_added']; ?>
+
+			<?php echo pretty_date($orders['date_added']); ?>
+
 			</button>
 		</h2>
 		</div>
@@ -32,7 +34,7 @@
 				<li><b>Name:</b> <?php echo $orders['full_name']; ?></li>
 				<li><b>Email Address:</b> <?php echo $orders['email']; ?></li>
 				<li><b>Phone No:</b> <?php echo $orders['phone_number']; ?></li>
-				<li><b>Date of Event:</b> <?php echo $orders['date_of_event']; ?></li>
+				<li><b>Date of Event:</b> <?php echo pretty_date($orders['date_of_event']); ?></li>
 				<li><b>Type of Event:</b> <?php echo $orders['type_of_event']; ?></li>
 				<li><b>Size:</b> <?php echo $orders['size']; ?></li>
 				<li><b>Colour Theme:</b> <?php echo $orders['color']; ?></li>
