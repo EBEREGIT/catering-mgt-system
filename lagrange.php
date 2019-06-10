@@ -12,7 +12,7 @@
 
       $interpolate_query = $db->query("SELECT size FROM placed_orders WHERE type_of_event = '$type_of_event'");
       
-      $i = 0;
+      $i = 1;
       
 ?>
 
@@ -37,7 +37,7 @@
   </head>
 
   <body>
-
+  <?php include_once('nav.php'); ?>
 <div class="container sign-up">
 <h1>Lagrange</h1>
 <h4>The following equations define Lagrange polinomial interpolation</h4>
