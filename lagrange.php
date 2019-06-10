@@ -1,3 +1,21 @@
+<?php 
+	include_once 'core/init.php';
+  include_once 'core/functions.php';
+  
+  if (isset($_GET['suggest'])) {
+    $suggest_id = (int)$_GET['suggest'];
+    $suggest_id = sanitize($suggest_id);
+    $suggest_query = $db->query("SELECT * FROM placed_orders WHERE id = '$suggest_id'");
+    
+    while ($suggest = mysqli_fetch_assoc($suggest_query)) {
+      $type_of_event = $suggest['type_of_event'];
+
+      $interpolate_query = $db->query("SELECT size FROM placed_orders WHERE type_of_event = '$type_of_event'");
+      
+      $i = 0;
+      
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,7 +37,7 @@
   </head>
 
   <body>
-  <?php include_once('nav.php'); ?>
+
 <div class="container sign-up">
 <h1>Lagrange</h1>
 <h4>The following equations define Lagrange polinomial interpolation</h4>
@@ -41,9 +59,14 @@
         <th></th>
         <th></th>
       </tr>
+
+<?php 
+  while ($interpolate = mysqli_fetch_assoc($interpolate_query)) {
+
+?>
       <tr>
-        <td contenteditable="true" class="number">2</td>
-        <td contenteditable="true" class="number">3.1</td>
+        <td contenteditable="true" class="number"><?php echo $i++; ?></td>
+        <td contenteditable="true" class="number"><?php echo $interpolate['size']; ?></td>
         <td>
           <span class="table-remove glyphicon glyphicon-remove"></span>
         </td>
@@ -52,7 +75,14 @@
           <span class="table-down glyphicon glyphicon-arrow-down"></span>
         </td>
       </tr>
-      <tr>
+
+<?php 
+  }
+  } 
+  }
+?>
+
+      <!-- <tr>
         <td contenteditable="true" class="number">4</td>
         <td contenteditable="true" class="number">5.6</td>
         <td>
@@ -73,7 +103,7 @@
           <span class="table-up glyphicon glyphicon-arrow-up"></span>
           <span class="table-down glyphicon glyphicon-arrow-down"></span>
         </td>
-      </tr>
+      </tr> -->
       <!-- This is our clonable table line -->
       <tr class="hide d-none">
         <td contenteditable="true" class="number">0</td>
@@ -115,6 +145,7 @@
 </div>
 </div>
 </div>
+
 <script src="lagrange/dist/js/jquery-3.3.1.min.js"></script>
 <script src="lagrange/dist/js/jquery-ui.min.js"></script>
 <script src="lagrange/dist/js/katex.min.js"></script>
@@ -133,4 +164,4 @@ katex.render("P_n(x) = \\displaystyle \\sum_{i = 0}^{n} L_i \\cdot f(x_i)" , equ
 
 
 </script>
-<?php include_once('foot.php'); ?>
+

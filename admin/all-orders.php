@@ -20,6 +20,11 @@
 		</thead>
 
 <?php 
+	if (isset($_GET['suggest'])){
+		
+		header('Location: ../lagrange.php');
+
+	}else{
 	$i = 0;
 	$order_query = $db->query("SELECT * FROM placed_orders");
 	while ($orders = mysqli_fetch_assoc($order_query)) {
@@ -30,8 +35,7 @@
 			<tr>
 				<td><?php echo $i; ?></td>
 				<td>
-					<a href="users_admin.php?delete=<?php echo $user['user_id']; ?>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove-sign"></span></a>
-					<a href="users_admin.php?edit=<?php echo $user['user_id']; ?>" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-pencil"></span></a>
+					<a href="../lagrange.php?suggest=<?php echo $orders['id']; ?>" class="btn btn-primary btn-xs">Get Suggestion</a>
 				</td>
 
 				<td><?php echo $orders['full_name']; ?></td>
@@ -48,4 +52,4 @@
 	</table>
 </div>
 
-<?php include_once 'admin-foot.php'; ?>
+<?php } include_once 'admin-foot.php'; ?>
